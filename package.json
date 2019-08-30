@@ -27,5 +27,31 @@
     "postcss-url": "^8.0.0",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+
+  "stylelint": {
+    "extends": "stylelint-config-recommended",
+    "rules": {
+      "max-empty-lines": 2,
+      "at-rule-no-unknown": [ true, {
+        "ignoreAtRules": [
+          "extends"
+        ]
+      }],
+      "block-no-empty": null,
+      "unit-whitelist": ["em", "rem", "s", "px", "%"]
+    }
   }
 }
